@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
 const app = express();
-const ip = '44.197.2.144';
+const ip = '3.95.79.220';
 const port = 3000;
 const fs = require('fs');
 
@@ -14,20 +14,15 @@ app.use(bodyParser.json());
 // Configuración de archivos estáticos
 app.use(express.static(path.join(__dirname)));
 
-// Configuración de conexión a MySQL
-let conexion = mysql.createConnection({
+// Configuración de conexión a MySQL con un pool
+let pool = mysql.createPool({
     host: "database-1.cpu2kase657b.us-east-1.rds.amazonaws.com",
     database: "PaginaWeb",
     user: "admin",
-    password: "admin123"
-});
-
-conexion.connect((err) => {
-    if (err) {
-        console.error('Error de conexión a la base de datos: ' + err.stack);
-        return;
-    }
-    console.log('Conectado a la base de datos.');
+    password: "admin123",
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 // Manejo de la solicitud POST del formulario
@@ -45,7 +40,7 @@ app.post('/submit-form', (req, res) => {
         }
 
         // Redirige a la página de confirmación o éxito
-        const htmlPath = path.join(__dirname, 'public', 'HTML', 'Contactanos.html');
+        const htmlPath = path.join(__dirname, 'public', 'HTML', 'Inicio.html');
         fs.readFile(htmlPath, 'utf8', (err, data) => {
             if (err) {
                 console.error('Error al leer el archivo HTML: ' + err);
@@ -59,9 +54,10 @@ app.post('/submit-form', (req, res) => {
 
 // Servir el archivo HTML principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'HTML', 'Inicio.html'));
 });
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://${ip}:${port}`);
 });
+
