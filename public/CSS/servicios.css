@@ -1,0 +1,32 @@
+/* Asegura que el menú de Servicios se despliegue al costado */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Se despliega hacia la derecha del enlace */
+    margin-top: 0;
+    margin-left: 0;
+    display: none; /* Oculto por defecto */
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block; /* Mostrar el menú al pasar el mouse */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    white-space: nowrap; /* Asegura que el texto no se rompa en líneas múltiples */
+}
+
+/* Ajusta el estilo del menú desplegable */
+.navbar-nav .dropdown-menu {
+    background-color: #fff; /* Fondo blanco para el menú desplegable */
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa; /* Fondo diferente al pasar el mouse sobre una opción */
+}
+
+.navbar-dark .navbar-nav .nav-link.dropdown-toggle::after {
+    display: none; /* Oculta el icono de flecha predeterminado de Bootstrap */
+}

@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2f1e9;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    background-image: url(https://img.freepik.com/fotos-premium/paneles-solares-molinos-viento-campo-fuente-energia-alternativa_847296-11889.jpg?w=826);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding-left: 20px;
+}
+.header h1 {
+    margin: 0;
+}
+.entregas {
+    text-align: center;
+    margin: 40px 0;
+}
+.entregas .item {
+    display: inline-block;
+    width: 30%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.entregas img {
+    width: 100px;
+    height: auto;
+}
+.como-funciona {
+    background-color: #e2f1e9;
+    padding: 20px;
+    margin: 40px 0;
+}
+.como-funciona h2 {
+    text-align: center;
+    color: #3a7065;
+}
+.como-funciona .paso {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.como-funciona .paso img {
+    width: 100px;
+    margin-right: 20px;
+}
+.footer {
+    background-color: #e8eeed;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

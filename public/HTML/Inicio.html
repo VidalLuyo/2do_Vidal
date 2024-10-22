@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Objetivos de Desarrollo Sostenible</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tus propios estilos CSS -->
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/ruleta.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="Inicio.html">
+                <img src="/public/IMG/logo-nav.png" alt="Logo" class="img-fluid" style="width: 40px; height: 40px; margin-right: 8px;">
+                Eternal Energy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/public/HTML/Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!-- Enlace principal "Servicios" que apunta a servicios.html -->
+                        <a class="nav-link dropdown-toggle" href="/public/HTML/servicios.html" id="navbarDropdown" role="button">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/public/HTML/Actividades.html">Actividades</a></li>
+                            <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                            <li><a class="dropdown-item" href="#">Servicio 3</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Ver Todos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/public/HTML/ODS7-Inicio.html">ODS7</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/public/HTML/producto.html">Producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/public/HTML/Quienes-son.html">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/public/HTML/Contactanos.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>LOS OBJETIVOS DE</h1>
+                <h1>DESARROLLO</h1>
+                <h1 class="highlight">SOSTENIBLE</h1>                
+                <p>Construyendo un futuro equitativo y sostenible para todos,</p>
+                <p>donde el progreso social y económico respete y preserve</p>
+                <p>nuestro planeta.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 01 -->
+    <section class="section-01">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>¿Qué son los ODS?</h2>
+                    <p>Los ODS, Objetivos de Desarrollo Sostenible, son 17 metas globales que se establecieron para abordar los problemas más urgentes del mundo, como la pobreza, la igualdad y el cambio climático. Fueron adoptados por todos los países de la ONU en 2015 para asegurar un futuro mejor para todos. Cada objetivo tiene metas específicas y se espera que sean alcanzados para el año 2030.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="/public/IMG/ruleta.png" alt="ODS Wheel" class="circular-image" id="rotatingImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/public/JS/ruleta.js"></script>
+     
+    <!-- Section 02 -->
+    <section class="section-02">
+        <div class="container">
+            <div class="titulo text-center mb-4">
+                <img src="/public/IMG/image.png" alt="SDG Title" class="img-fluid">
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="grid" id="iconGrid">
+                        <!-- Los iconos se insertarán aquí dinámicamente -->
+                    </div>
+                    <div class="text-center mt-3">
+                        <button id="showMoreBtn" class="btn btn-primary">Mostrar más</button>
+                        <button id="showLessBtn" class="btn btn-secondary d-none">Mostrar menos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 03 -->
+    <section class="section-03">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="/public/IMG/PLANETAODS.jpg" alt="ODS Wheel" class="img-fluid sdg-wheel">
+                </div>
+                <div class="col-md-8">
+                    <div class="text-box">
+                       <br> <h2>¿QUÉ SON LOS ODS Y CÓMO SE ORIGINARON?</h2>
+                        <p>Los Objetivos de Desarrollo Sostenible (ODS), también conocidos como Objetivos Globales, fueron adoptados por las Naciones Unidas en 2015 como un llamamiento universal para poner fin a la pobreza, proteger el planeta y garantizar que para el 2030 todas las personas disfruten de paz y prosperidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/public/JS/ruleta.js"></script>
+    </section>
+    
+    <!-- Section 04 -->
+    <section class="section-01">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>¿Qué son los ODS?</h2>
+                    <p>Los ODS, Objetivos de Desarrollo Sostenible, son 17 metas globales que se establecieron para abordar los problemas más urgentes del mundo, como la pobreza, la igualdad y el cambio climático. Fueron adoptados por todos los países de la ONU en 2015 para asegurar un futuro mejor para todos. Cada objetivo tiene metas específicas y se espera que sean alcanzados para el año 2030.</p>
+                </div>
+                <div class="col-md-4">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.iberdrola.com/documents/20125/40201/Habitos_Consumo_746x419.jpg/ba39a170-5c21-6b1e-8bf5-a902490e61d6?t=1627013138196" class="d-block w-100" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://conideintelligente.com/wp-content/uploads/2021/01/Depositphotos_29966311_l-2015_Fotor-1.jpg" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmbg10UuLs-0iZOjNG4aNR69hpi5VhBk2PA&s" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white mt-auto">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Sobre Nosotros</h4>
+                    <p>Somos una organización dedicada a promover los Objetivos de Desarrollo Sostenible (ODS) y crear conciencia sobre su importancia en el mundo actual.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/public/HTML/Inicio.html" class="text-white">Inicio</a></li>
+                        <li><a href="#about" class="text-white">Acerca de</a></li>
+                        <li><a href="#services" class="text-white">Servicios</a></li>
+                        <li><a href="#contact" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contacto</h4>
+                    <p>Email: <a href="mailto:jesus.luyoc@vallegrande.edu.pe" class="text-white">jesus.luyoc@vallegrande.edu.pe</a></p>
+                    <p>Email: <a href="mailto:Salvador.cardenas@vallegrande.edu.pe" class="text-white">Salvador.cardenas@vallegrande.edu.pe</a></p>
+                    <p>Email: <a href="mailto:duban.napan.salas@vallegrande.edu.pe" class="text-white">duban.napan.salas@vallegrande.edu.pe</a></p>
+                    <p>Teléfono: +51 921320431</p>
+                    <p>Síguenos en:</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <p>&copy; 2024 - Todos los derechos reservados al equipo 09.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS Bundle (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="/public/JS/Inicio.js"></script>
+</body>
+</html>
